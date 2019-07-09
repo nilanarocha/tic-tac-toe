@@ -1,0 +1,92 @@
+body {
+    background: url(/Users/nilanarocha/Projects/sei33-homework/nilana_pereiraDaRocha/tictactoe/notebook-paper-textures-background.jpg);
+}
+
+.game-item {
+    color: black;
+    background-color: transparent;
+    font-size: 150px;
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Reenie Beanie', cursive;
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    border: 10px solid #77949c;
+    cursor: pointer;
+    padding: 20px;
+    margin: 0;
+    line-height: 90px;
+    vertical-align: top;
+}
+
+.game-item:hover {
+    background: #d1d4d6;
+    transition: background .2s linear;
+}
+
+.game-title {
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 80px;
+    text-align: center;
+}
+
+.no-border-top {
+    border-top: 0;
+}
+
+.no-border-bottom {
+    border-bottom: 0;
+}
+
+.no-border-right {
+    border-right: 0;
+}
+
+.no-border-left {
+    border-left: 0;
+}
+
+#game {
+    display: inline-table
+}
+
+.win-item {
+    width: 400px;
+    height: 30px;
+    margin: 35px 58px;
+    cursor: pointer;
+    padding: 20px;
+    color: black;
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 70px;
+    /* text-decoration: line-through; */
+}
+
+/* .win {
+    display: inline-block;
+} */
+
+.footer {
+    display: block;
+    background: #77949c;
+    color: black;
+    height: 150px;
+    margin: 100px auto;
+    padding: 10px;
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 20px;
+    margin-bottom: 10px
+}
+
+.footer-description {
+    text-align: left;
+}
+
+.default-margin {
+    width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
