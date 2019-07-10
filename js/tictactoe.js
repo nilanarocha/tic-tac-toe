@@ -14,6 +14,38 @@ let playerO = [];
 // or false otherwise."boolean"
 const checkWin = function (player) {
     let winner = false;
+    if (player.includes(1) && player.includes(2) && player.includes(3)) {
+        $('#1, #2, #3').addClass('game-item-winner');
+    }
+
+    if (player.includes(4) && player.includes(5) && player.includes(6)) {
+        $('#4, #5, #6').addClass('game-item-winner');
+    }
+
+    if (player.includes(7) && player.includes(8) && player.includes(9)) {
+        $('#7, #8, #9').addClass('game-item-winner');
+    }
+
+    if (player.includes(1) && player.includes(4) && player.includes(7)) {
+        $('#1, #4, #7').addClass('game-item-winner');
+    }
+
+    if (player.includes(2) && player.includes(5) && player.includes(8)) {
+        $('#2, #5, #8').addClass('game-item-winner');
+    }
+
+    if (player.includes(3) && player.includes(6) && player.includes(9)) {
+        $('#3, #6, #9').addClass('game-item-winner');
+    }
+
+    if (player.includes(1) && player.includes(5) && player.includes(9)) {
+        $('#1, #5, #9').addClass('game-item-winner');
+    }
+
+    if (player.includes(3) && player.includes(5) && player.includes(7)) {
+        $('#3, #5, #7').addClass('game-item-winner');
+    }
+
     // I can have 8 matches. (3 horizontals, 3 verticals, 2 diagonals)
     // function includes() check if array contains the number
     if ((player.includes(1) && player.includes(2) && player.includes(3)) ||
@@ -36,7 +68,8 @@ let restartGame = function () {
     $(".game-item").attr("disabled", false);
     playerX = [];
     playerO = [];
-    $('.win-item').text("");
+    $('.win-message').text("");
+    $('#1, #2, #3, #4, #5, #6, #7, #8, #9').removeClass('game-item-winner');
 };
 
 $(".game-item").click(function () {
@@ -59,7 +92,7 @@ $(".game-item").click(function () {
     if (currentPlayer === "X") {
         let playerXWon = checkWin(playerX);
         if (playerXWon === true) {
-            $('.win-item').text('Player X win!');
+            $('.win-message').text('Player X won! 👏');
             // when player X wons I should disable all the buttons of the game.
             $('.game-item').attr("disabled", true);
             return;
@@ -67,8 +100,8 @@ $(".game-item").click(function () {
     } else {
         let playerOWon = checkWin(playerO);
         if (playerOWon === true) {
-            $('.win-item').text('Player O win!');
-            // when player X wons I should disable all the buttons of the game.
+            $('.win-message').text('Player O won! 👏');
+            // when player O wons I should disable all the buttons of the game.
             $('.game-item').attr("disabled", true);
             return;
         }
@@ -76,7 +109,8 @@ $(".game-item").click(function () {
 
     // If user clicks in all buttons the game should restart. 
     if (counter === 9) {
-        $('.win-item').text('Draw');
+        $('.win-message').text('Draw 🤷🏽‍♀');
+
     }
 });
 // when I click on the  restart button I should call restart game function
