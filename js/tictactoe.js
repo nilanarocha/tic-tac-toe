@@ -6,9 +6,12 @@
 // 6. check if player "o" won
 // 
 let counter = 0;
+let scoreX = 0;
+let scoreO = 0;
 //create player o array
 let playerX = [];
 let playerO = [];
+
 
 const checkWin = function (player) {
     let winner = false;
@@ -82,6 +85,7 @@ $(".game-item").click(function () {
         // "+" string to number
         playerO.push(+$(this).attr("id"));
     }
+    // When I click on the buttons the counter start sum the number of matches.
     counter += 1;
     $(this).text(currentPlayer);
     // To disable a submit button, you just need to add a disabled attribute to the submit button.
@@ -93,6 +97,9 @@ $(".game-item").click(function () {
             $('.win-message').text('Player X won! 👏');
             // when player X wons I should disable all the buttons of the game.
             $('.game-item').attr("disabled", true);
+            scoreX += 1;
+            $('#scoreX').text(`Player X = ${scoreX}`);
+            // alert(scoreX)
             return;
         }
     } else {
@@ -101,6 +108,9 @@ $(".game-item").click(function () {
             $('.win-message').text('Player O won! 👏');
             // when player O wons I should disable all the buttons of the game.
             $('.game-item').attr("disabled", true);
+            scoreO += 1;
+            $('#scoreO').text(`Player O = ${scoreO}`);
+            // // alert(scoreX);
             return;
         }
     }
@@ -116,5 +126,6 @@ $('.restart').click(function () {
     // restart the game 
     restartGame();
 });
+
 
 
