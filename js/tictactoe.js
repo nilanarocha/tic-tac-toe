@@ -10,8 +10,6 @@ let counter = 0;
 let playerX = [];
 let playerO = [];
 
-// function should return true if player "x" contains all the numbers of one of the matches 
-// or false otherwise."boolean"
 const checkWin = function (player) {
     let winner = false;
     if (player.includes(1) && player.includes(2) && player.includes(3)) {
