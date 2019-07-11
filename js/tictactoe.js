@@ -1,10 +1,10 @@
-// 1. alternate between players "x" and "o". okay 
-// 2. Stopped game if all buttons were clicked. okay
-// 3. Users shouldn't click the button more than once. okay
-// 4. the game should restart after board is full. okay
-// 5. check if player "x" won 
-// 6. check if player "o" won
-// 
+// 1. alternate between players "x" and "o".  
+// 2. Stopped game if all buttons were clicked. 
+// 3. Users shouldn't click the button more than once. 
+// 4. the game should restart after board is full. 
+// 5. check if player "x" won.
+// 6. check if player "o" won.
+
 let counter = 0;
 let scoreX = 0;
 let scoreO = 0;
@@ -99,7 +99,6 @@ $(".game-item").click(function () {
             $('.game-item').attr("disabled", true);
             scoreX += 1;
             $('#scoreX').text(`Player X = ${scoreX}`);
-            // alert(scoreX)
             return;
         }
     } else {
@@ -110,7 +109,6 @@ $(".game-item").click(function () {
             $('.game-item').attr("disabled", true);
             scoreO += 1;
             $('#scoreO').text(`Player O = ${scoreO}`);
-            // // alert(scoreX);
             return;
         }
     }
