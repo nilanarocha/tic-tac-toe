@@ -22,3 +22,6 @@
 
 <img src="Screen Shot 2019-07-11 at 11.20.43 am.png" alt="draw-style" Width="250" height="400"/>
 
+## Demo 
+
+The demo page is hosted on Github pages you can access on this link https://nilanarocha.github.io/tic-tac-toe/. You can find more details of how to configure and publish source from Github into Github pages acessing this link: https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages .
